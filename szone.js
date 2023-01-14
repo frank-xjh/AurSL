@@ -28,7 +28,7 @@ export default class szone {
                 }
             });
         else {
-            if (window.location.pathname == "/home.html") window.location.href = "index.html";
+            if (window.location.pathname == "/AurSL/home.html") window.location.href = "index.html";
         }
     }
 
