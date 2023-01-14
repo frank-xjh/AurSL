@@ -20,12 +20,14 @@ export default class szone {
     constructor() {
         if (this.getStorage())
             this._updateUserInfo().then((data) => {
+                /*
                 if (data.status == 200) {
                     if (window.location.pathname != "/home.html") window.location.href = "home.html";
                 } else {
                     this.setToken();
                     if (window.location.pathname == "/home.html") window.location.href = "index.html";
                 }
+                */
             });
         else {
             if (window.location.pathname == "/home.html") window.location.href = "index.html";
