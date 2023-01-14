@@ -33,9 +33,9 @@ export default class szone {
     }
 
     getStorage() {
-        this.#token = sessionStorage.getItem("token");
-        if (sessionStorage.getItem("userinfo")) this.#userinfo = JSON.parse(sessionStorage.getItem("userinfo"));
-        this.#userguid = sessionStorage.getItem("userguid");
+        this.#token = localStorage.getItem("token");
+        if (localStorage.getItem("userinfo")) this.#userinfo = JSON.parse(localStorage.getItem("userinfo"));
+        this.#userguid = localStorage.getItem("userguid");
         if (!this.#token) return false;
         this.#headers.Token = this.#token;
         return true;
@@ -43,11 +43,11 @@ export default class szone {
 
     setToken(token) {
         this.#userinfo = {};
-        sessionStorage.setItem("userinfo", "");
+        localStorage.setItem("userinfo", "");
         this.#userguid = "";
-        sessionStorage.setItem("userguid", "");
+        localStorage.setItem("userguid", "");
         this.#token = token;
-        sessionStorage.setItem("token", token);
+        localStorage.setItem("token", token);
         this.#headers.Token = token;
     }
 
@@ -149,9 +149,9 @@ export default class szone {
         return this._dataFetch("my", "/userInfo/GetUserInfo", "GET").then((data) => {
             if (data.status == 200) {
                 this.#userinfo = data.data;
-                sessionStorage.setItem("userinfo", JSON.stringify(data.data));
+                localStorage.setItem("userinfo", JSON.stringify(data.data));
                 this.#userguid = data.data.userGuid;
-                sessionStorage.setItem("userguid", data.data.userGuid);
+                localStorage.setItem("userguid", data.data.userGuid);
             }
             return data;
         });
