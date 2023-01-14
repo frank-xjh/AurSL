@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
+        <link href="https://unpkg.com/@github/details-dialog-element/dist/index.css" rel="stylesheet" />
+        <link href="main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="d-flex main-container">
+            <div class="Header">
+                <div class="Header-item">
+                    <a href="#" class="Header-link f4 d-flex flex-items-center ml-sm-6 ml-3">
+                        <span>AurLS</span>
+                    </a>
+                </div>
+                <div class="Header-item ml-auto mr-sm-6 mr-3 f4" id="studentName"></div>
+                <div class="Popover mr-0 mr-sm-4" id="Popover">
+                    <div class="Popover-message Popover-message--top-right text-left p-4 mt-2 Box color-shadow-large mr-5">
+                        <h4 class="mb-2" id="profile">Profile</h4>
+                        <div class="TimelineItem ml-1 pb-0">
+                            <div class="TimelineItem-badge">
+                                <svg class="octicon" viewBox="0 0 16 16" width="16" height="16">
+                                    <path
+                                        d="M10.561 8.073a6.005 6.005 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6.004 6.004 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0ZM10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"
+                                    ></path>
+                                </svg>
+                            </div>
+
+                            <div class="TimelineItem-body">
+                                <p class="text-bold mr-1" id="studentName"></p>
+                                <p id="nickName"></p>
+                            </div>
+                        </div>
+                        <div class="TimelineItem ml-1 pt-0 pb-0">
+                            <div class="TimelineItem-badge">
+                                <svg class="octicon" viewBox="0 0 16 16" width="16" height="16">
+                                    <path
+                                        d="M1.75 16A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0h8.5C11.216 0 12 .784 12 1.75v12.5c0 .085-.006.168-.018.25h2.268a.25.25 0 0 0 .25-.25V8.285a.25.25 0 0 0-.111-.208l-1.055-.703a.749.749 0 1 1 .832-1.248l1.055.703c.487.325.779.871.779 1.456v5.965A1.75 1.75 0 0 1 14.25 16h-3.5a.766.766 0 0 1-.197-.026c-.099.017-.2.026-.303.026h-3a.75.75 0 0 1-.75-.75V14h-1v1.25a.75.75 0 0 1-.75.75Zm-.25-1.75c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25ZM3.75 6h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 3.75A.75.75 0 0 1 3.75 3h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 3.75Zm4 3A.75.75 0 0 1 7.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 7 6.75ZM7.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 9.75A.75.75 0 0 1 3.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 9.75ZM7.75 9h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z"
+                                    ></path>
+                                </svg>
+                            </div>
+
+                            <div class="TimelineItem-body">
+                                <p class="text-bold mr-1" id="schoolName"></p>
+                            </div>
+                        </div>
+                        <div class="TimelineItem ml-1">
+                            <div class="TimelineItem-badge">
+                                <svg class="octicon" viewBox="0 0 16 16" width="16" height="16">
+                                    <path
+                                        d="M7.693 1.066a.747.747 0 0 1 .614 0l7.25 3.25a.75.75 0 0 1 0 1.368L13 6.831v2.794c0 1.024-.81 1.749-1.66 2.173-.893.447-2.075.702-3.34.702-.278 0-.55-.012-.816-.036a.75.75 0 0 1 .133-1.494c.22.02.45.03.683.03 1.082 0 2.025-.221 2.67-.543.69-.345.83-.682.83-.832V7.503L8.307 8.934a.747.747 0 0 1-.614 0L4 7.28v1.663c.296.105.575.275.812.512.438.438.688 1.059.688 1.796v3a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75v-3c0-.737.25-1.358.688-1.796.237-.237.516-.407.812-.512V6.606L.443 5.684a.75.75 0 0 1 0-1.368ZM2.583 5 8 7.428 13.416 5 8 2.572ZM2.5 11.25v2.25H4v-2.25c0-.388-.125-.611-.25-.735a.697.697 0 0 0-.5-.203.707.707 0 0 0-.5.203c-.125.124-.25.347-.25.735Z"
+                                    ></path>
+                                </svg>
+                            </div>
+
+                            <div class="TimelineItem-body">
+                                <p class="text-bold mr-1" id="currentGrade"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Body d-flex main-bar flex-1">
+                <div class="border flex-1 p-3" id="examlist"></div>
+                <div class="p-5 border flex-1">
+                    <h1 id="examTitle"></h1>
+                    <span class="Label mr-1 mt-2 Label--success" id="exam-time"></span
+                    ><span class="Label mr-1 mt-2 Label--accent" id="stuCode"></span>
+                    <div class="markdown-body mt-3" id="md"></div>
+                    <div class="Subhead mt-3"></div>
+                    <a href="#" class="link-mktg arrow-target-mktg link-emphasis-mktg text-semibold f3-mktg mt-3" id="chbtn">
+                        Refresh
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="octicon arrow-symbol-mktg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
+                            ></path>
+                            <path stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="home.js"></script>
+    </body>
+</html>

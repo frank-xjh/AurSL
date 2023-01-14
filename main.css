@@ -1,0 +1,44 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.Header {
+    width: 100%;
+}
+
+.Body {
+    width: 100%;
+    height: 100%;
+}
+
+#profile {
+    color: var(--color-fg-default);
+}
+
+#Popover {
+    right: 0 !important;
+    left: auto !important;
+    top: 40px !important;
+    display: none;
+}
+
+#examlist {
+    overflow-y: auto;
+}
+
+.filter-item {
+    white-space: initial !important;
+}

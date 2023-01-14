@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
+        <link href="https://unpkg.com/@github/details-dialog-element/dist/index.css" rel="stylesheet" />
+        <link href="main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="width-full height-full position-absolute d-flex">
+            <div class="d-flex flex-column flex-justify-center flex-items-center flex-self-center col-10 container-sm pb-md-12 pb-sm-8 pb-6">
+                <p class="h1">AurLS</p>
+                <div class="Box width-full mt-3 px-sm-3">
+                    <div class="Box-body">
+                        <form>
+                            <div class="form-group">
+                                <div class="form-group-header">
+                                    <label for="example-text">Phone Number</label>
+                                </div>
+                                <div class="form-group-body">
+                                    <input class="form-control width-full anim-hover-grow" type="number" id="pnum" placeholder="Phone Number" />
+                                </div>
+                                <p class="note error">Invalid Phone Number</p>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-group-header">
+                                    <label for="example-text">Password</label>
+                                </div>
+                                <div class="form-group-body">
+                                    <input class="form-control width-full anim-hover-grow" type="password" id="pwd" placeholder="Password" />
+                                </div>
+                                <p class="note error">Empty Password</p>
+                            </div>
+                        </form>
+                        <button class="btn-small-mktg btn-mktg arrow-target-mktg btn-signup-mktg btn-block mt-3 mb-3" type="button" id="btn">
+                            Login<svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="octicon arrow-symbol-mktg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                            >
+                                <path
+                                    fill="currentColor"
+                                    d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
+                                ></path>
+                                <path stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <p class="mt-6 color-fg-subtle text-light h6">Designed by Aurathyst</p>
+            </div>
+        </div>
+        <details class="details-reset details-overlay details-overlay-dark">
+            <summary aria-haspopup="dialog"></summary>
+            <details-dialog class="p-1 anim-fade-in fast" id="details">
+                <div class="Toast Toast--warning width-auto">
+                    <span class="Toast-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-alert" aria-hidden="true">
+                            <path
+                                fill-rule="evenodd"
+                                d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"
+                            />
+                        </svg>
+                    </span>
+                    <span class="Toast-content h2 text-center width-full" id="alert-text">Warning message goes here.</span>
+                    <button class="Toast-dismissButton m-auto" data-close-dialog>
+                        <svg width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-x" aria-hidden="true">
+                            <path
+                                fill-rule="evenodd"
+                                d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </details-dialog>
+        </details>
+        <script src="https://unpkg.com/leancloud-storage@4.14.0/dist/av-min.js"></script>
+        <script type="module" src="https://unpkg.com/@github/details-dialog-element/dist/index.js"></script>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
